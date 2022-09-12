@@ -59,33 +59,32 @@ if (string.IsNullOrEmpty(pickMood) && pickMood is not null)
     pickMood = Console.ReadLine();
 }
 
-if (pickMood is not null)
+if (pickMood is not null && pickName is not null)
 {
     if (pickName.Contains("Master"))
-    {
-        if (pickMood.Contains("good") || pickMood.Contains("great") || pickMood.Contains("happy"))
         {
-            Console.WriteLine(" Glad to hear you feel " + pickMood + " " + pickName + "!!");
+            if (pickMood.Contains("good") || pickMood.Contains("great") || pickMood.Contains("happy"))
+            {
+                Console.WriteLine(" Glad to hear you feel " + pickMood + " " + pickName + "!!");
+            }
+            else
+            {
+                Console.WriteLine("sorry to hear you feel " + pickMood + " " + pickName);
+            }
         }
         else
         {
-            Console.WriteLine("sorry to hear you feel " + pickMood + " " + pickName);
+            if (pickMood.Contains("good") || pickMood.Contains("great") || pickMood.Contains("happy"))
+            {
+                Console.WriteLine("Sorry to hear you feel " + pickMood + "! I like it when my servants are miserable!");
+            }
+            else
+            {
+                Console.WriteLine("how about we make you feel worse! HAHAHAA :D");
+            }
         }
     }
-    else
-    {
-        if (pickMood.Contains("good") || pickMood.Contains("great") || pickMood.Contains("happy"))
-        {
-            Console.WriteLine("Sorry to hear you feel " + pickMood + "! I like it when my servants are miserable!");
-        }
-        else
-        {
-            Console.WriteLine("how about we make you feel worse! HAHAHAA :D");
-        
-        }
-    }
-}
-   
+
 
 
 Console.WriteLine(pickName + ". When where you born?");
