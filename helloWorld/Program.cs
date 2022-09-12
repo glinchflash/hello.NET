@@ -76,7 +76,7 @@ if (pickMood is not null)
     {
         if (pickMood.Contains("good") || pickMood.Contains("great") || pickMood.Contains("happy"))
         {
-            Console.WriteLine("Sorry to hear you feel " + pickMood + "I like it when my servants are miserable!");
+            Console.WriteLine("Sorry to hear you feel " + pickMood + "! I like it when my servants are miserable!");
         }
         else
         {
@@ -95,6 +95,7 @@ var birthday = Console.ReadLine();
 DateTime dob = Convert.ToDateTime(birthday);
 
 var age = today.Year - dob.Year;
+// if statement to check for leap year
 if (dob.Date > today.AddYears(-age)) age--;
 
 if (age > 30)
